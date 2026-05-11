@@ -18,12 +18,16 @@ public class SnakeAndLadder {
         System.out.println("Dice: " + dice + " | Option: " + option);
 
         switch (option) {
+            case NO_PLAY:
+                System.out.println("No Play");
+                break;
             case LADDER:
                 position += dice;
                 break;
             case SNAKE:
                 position -= dice;
                 break;
+
         }
 
         if (position < 0) position = 0;
