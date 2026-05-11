@@ -14,7 +14,7 @@ public class SnakeAndLadder {
 
             int dice = random.nextInt(6) + 1;
             int option = random.nextInt(3);
-
+            int oldPosition = position;
             switch (option) {
                 case LADDER:
                     position += dice;
@@ -25,7 +25,8 @@ public class SnakeAndLadder {
             }
 
             if (position < 0) position = 0;
-
+// IMPORTANT FIX
+            if (position > 100) position = oldPosition;
             System.out.println("Position: " + position);
         }
 
