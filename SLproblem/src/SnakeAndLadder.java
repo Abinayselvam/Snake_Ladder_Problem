@@ -9,9 +9,10 @@ public class SnakeAndLadder {
         System.out.println("Welcome to the snake and ladder game");
         int position = 0;
         Random random=new Random();
+        int diceCount=0;
 
         while (position < 100) {
-
+            diceCount++;
             int dice = random.nextInt(6) + 1;
             int option = random.nextInt(3);
             int oldPosition = position;
@@ -27,9 +28,9 @@ public class SnakeAndLadder {
             if (position < 0) position = 0;
 // IMPORTANT FIX
             if (position > 100) position = oldPosition;
-            System.out.println("Position: " + position);
+            System.out.println("Dice: " + dice + " | Position: " + position);
         }
 
-        System.out.println("Reached 100!");
+        System.out.println("Total Dice Rolls: " + diceCount);
     }
 }
